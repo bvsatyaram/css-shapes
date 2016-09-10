@@ -1,0 +1,33 @@
+$primary-color: #2c3e50;
+$font-color: #ecf0f1;
+
+#triangle {
+  width: 0;
+  height: 0;
+  border-top: 200px solid $primary-color;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+}
+
+#talk-bubble {
+  width: 400px;
+  height: 200px;
+  background-color: $primary-color;
+  color: $font-color;
+  border-radius: 30px;
+  position: relative;
+  padding: 35px;
+  box-sizing: border-box;
+  font-size: 45px;
+
+  &::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 50px solid $primary-color;
+    border-right: 50px solid transparent;
+    position: absolute;
+    bottom: -50px;
+    left: 50px;
+  }
+}
